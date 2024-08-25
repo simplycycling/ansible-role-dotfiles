@@ -1,4 +1,9 @@
 ---
+# As currently written, this file needs to be moved outside of
+# the ansible-role-dotfiles directory to be run.
+#
+# Run this file with Ansible playbook:
+# ansible-playbook runit.yml
 - hosts: localhost
   roles:
     - ansible-role-dotfiles
