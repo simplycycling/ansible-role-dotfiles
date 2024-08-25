@@ -1,12 +1,16 @@
 ---
-dotfiles_repo: "https://github.com/geerlingguy/dotfiles.git"
+dotfiles_repo: "https://github.com/simplycycling/dotfiles.git"
 dotfiles_repo_version: master
 dotfiles_repo_accept_hostkey: false
 dotfiles_repo_local_destination: "~/Documents/dotfiles"
 
 dotfiles_home: "~"
 dotfiles_files:
+  - .config
+  - .gitconfig
+  - .p10k.zsh
+  - .tmux.conf
+  - .wezterm.lua
+  - .zalias
   - .zshrc
   - .gitignore
-  - .inputrc
-  - .vimrc
