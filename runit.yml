@@ -1,0 +1,19 @@
+---
+- hosts: localhost
+  roles:
+    - ansible-role-dotfiles
+  tasks:
+    - name: Correct permissions
+      ansible.builtin.file:
+        path: ~/Documents/dotfiles/.config
+        mode: u=rwX,g=rX,o=rX
+        recurse: yes
+
+    - name: Correct more permissions
+      ansible.builtin.file:
+        path: "~/Documents/dotfiles/.config/{{ item }}"
+        mode: u=rwX,g=,o=
+      loop:
+        - 1Password
+        - htop
+        - op
