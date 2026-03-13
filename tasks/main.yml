@@ -17,6 +17,7 @@
     - "{{ dotfiles_home }}/.claude"
     - "{{ dotfiles_home }}/.claude/plugins"
     - "{{ dotfiles_home }}/.claude/plugins/.claude-plugin"
+    - "{{ dotfiles_home }}/.claude/plugins/devops-toolkit"
 
 - name: Ensure all configured dotfiles are links.
   command: "ls -F {{ dotfiles_home }}/{{ item }}"
