@@ -7,6 +7,17 @@
     accept_hostkey: "{{ dotfiles_repo_accept_hostkey }}"
   become: false
 
+- name: Ensure .claude subdirectories exist.
+  file:
+    path: "{{ item }}"
+    state: directory
+    mode: 0755
+  become: false
+  loop:
+    - "{{ dotfiles_home }}/.claude"
+    - "{{ dotfiles_home }}/.claude/plugins"
+    - "{{ dotfiles_home }}/.claude/plugins/.claude-plugin"
+
 - name: Ensure all configured dotfiles are links.
   command: "ls -F {{ dotfiles_home }}/{{ item }}"
   register: existing_dotfile_info
