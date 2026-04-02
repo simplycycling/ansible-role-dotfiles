@@ -14,5 +14,8 @@ dotfiles_files:
   - .zalias
   - .zshrc
   - .claude/settings.json
-  - .claude/plugins/.claude-plugin/marketplace.json
   - .claude/plugins/devops-toolkit
+  - bin/on
+  - bin/og
+
+  #TODO fix .claude/plugins/devops-toolkit/marketplace.json
