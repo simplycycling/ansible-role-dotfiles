@@ -16,8 +16,13 @@
   loop:
     - "{{ dotfiles_home }}/.claude"
     - "{{ dotfiles_home }}/.claude/plugins"
-    - "{{ dotfiles_home }}/.claude/plugins/.claude-plugin"
-    - "{{ dotfiles_home }}/.claude/plugins/devops-toolkit"
+
+- name: Ensure ~/bin directory exists.
+  file:
+    path: /Users/rsherman/bin/
+    state: directory
+    mode: 0755
+  become: false
 
 - name: Ensure all configured dotfiles are links.
   command: "ls -F {{ dotfiles_home }}/{{ item }}"
@@ -39,6 +44,5 @@
     src: "{{ dotfiles_repo_local_destination }}/{{ item }}"
     dest: "{{ dotfiles_home }}/{{ item }}"
     state: link
-    mode: 0644
   become: false
   with_items: "{{ dotfiles_files }}"
