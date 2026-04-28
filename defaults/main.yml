@@ -13,6 +13,7 @@ dotfiles_files:
   - .wezterm.lua
   - .zalias
   - .zshrc
+  - .zfunctions
   - .claude/settings.json
   - .claude/plugins/devops-toolkit
   - .claude/plugins/.claude-plugin/marketplace.json
