@@ -19,3 +19,4 @@ dotfiles_files:
   - .claude/plugins/.claude-plugin/marketplace.json
   - bin/on
   - bin/og
+  - bin/mktofu.sh
